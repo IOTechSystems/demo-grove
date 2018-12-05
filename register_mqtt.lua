@@ -3,6 +3,13 @@ local socket = require ("socket")
 local ltn12 = require("ltn12")
 local json = require ("dkjson")
 
+mqtt_addr = arg[1]
+if mqtt_addr == nil
+then
+  print ("mqtt address not set")
+  goto exit
+end
+
 endpoints = {
    metadata = "localhost:48081",
    export_client = "localhost:48071",
@@ -30,6 +37,7 @@ function post(target, path, data)
    print(url)
    print(payload)
    print(code)
+
    print("res = " .. res .. " code = " .. code .. " response_headers = " ..
             table.concat(response_headers, ',') .. "status = " .. status ..
             " response_body = " .. table.concat(response_body))
@@ -42,7 +50,7 @@ end
 function register_mqtt_export (exportNameParam, filterParam, topicNameParam)
    id = { name = exportNameParam .. " Address",
 	  protocol = "TCP",
-	  address = "mqtt-broker",
+	  address = mqtt_addr,
 	  port = 1883,
           method = "POST",
 	  publisher = exportNameParam,
@@ -61,3 +69,4 @@ end
 
 register_mqtt_export ("MQTT_DeviceGrove", "DeviceGrove", "MQTT_DeviceGrove")
 
+::exit::
