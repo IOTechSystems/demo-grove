@@ -62,7 +62,7 @@ end
 mqtt_addr = arg[1]
 if mqtt_addr ~= nil
 then
-  register_mqtt_export ("MQTT_DeviceGrove", "DeviceGrove", "MQTT_DeviceGrove")
+  register_mqtt_export ("MQTT_DeviceGrove", "GroveDevice", "MQTT_DeviceGrove")
 else
   print("mqtt address not set")
 end
