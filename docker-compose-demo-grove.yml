@@ -172,22 +172,6 @@ services:
     depends_on:
       - metadata
 
-  scheduler:
-    image: edgexfoundry/docker-support-scheduler-go-arm64:0.7.0
-    ports:
-      - "48085:48085"
-    container_name: edgex-support-scheduler
-    hostname: edgex-support-scheduler
-    networks:
-      - edgex-network
-    volumes:
-      - db-data:/data/db
-      - log-data:/edgex/logs
-      - consul-config:/consul/config
-      - consul-data:/consul/data
-    depends_on:
-      - metadata
-
   export-client:
     image: edgexfoundry/docker-export-client-go-arm64:0.7.0
     ports:
