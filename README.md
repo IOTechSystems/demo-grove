@@ -6,4 +6,4 @@ This repository contain:
 2. register_mqtt - Script that registers mqtt export for device grove.
 3. nodered_flow.json - Node-RED flow available to read measurements from Grove Sensors. 
    In the current version, readings from SoundSensor, LightIntensity and RotarySensor are available.
-
+4. usb_installer.zip - Ubuntu18.10 64-bit preinstalled with Node-RED, Node-RED Dashboard, mosquitto service, docker-compose and lua

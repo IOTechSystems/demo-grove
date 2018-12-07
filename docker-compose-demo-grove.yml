@@ -14,6 +14,10 @@
 #  * @author: Jim White, Dell
 #  * EdgeX Foundry, Developer Docker Compose
 #  * added: Nov 16, 2018
+#  *
+#  * @author: Bindu Rao, IOTech
+#  * For device-grove service on Raspberry Pi (arm64)
+#  * updated: Dec 07, 2018
 #  *******************************************************************************/
 
 version: '3'
