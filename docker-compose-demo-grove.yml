@@ -316,7 +316,6 @@ services:
 
   device-grove:
     image: edgexfoundry/docker-device-grove-c-arm64:1.0.1
-#    image: device-grove
     ports:
       - "49991:49991"
     devices:
